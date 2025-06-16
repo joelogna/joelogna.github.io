@@ -1,1 +1,15 @@
-foo
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DocuSign Complete</title>
+</head>
+<body>
+  <script>
+    // Notify parent that signing is complete
+    window.parent.postMessage("signing_complete", "*");
+
+    // Optional: hide or redirect iframe content to a blank page
+    window.location.replace("about:blank");
+  </script>
+</body>
+</html>
